@@ -40,8 +40,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <!-- Trigger the modal with a button -->
-                  <button type="button" class="btn btn-success btn-sm" style="float:right;margin-top:10px" data-toggle="modal" data-target="#myModal"><strong >+</strong> New Server</button>
-                  <button type="button" class="btn btn-success btn-sm" style="float:right;margin:10px 10px 0 0" data-toggle="modal" data-target="#updateModal"><strong >+</strong> New Database</button>
+                  <button type="button" class="btn btn-success btn-sm" style="float:right;margin-top:10px" data-toggle="modal" data-target="#myModal"><strong ><span class="glyphicon glyphicon-plus-sign"></span></strong> New Server</button>
+                  <button type="button" class="btn btn-success btn-sm" style="float:right;margin:10px 10px 0 0" data-toggle="modal" data-target="#updateModal"><strong ><span class="glyphicon glyphicon-plus-sign"></span></strong> New Database</button>
                 </div><!--/.navbar-collapse -->
               </div>
             </nav>
@@ -53,25 +53,28 @@
                   <tr>
                   <th>Server</th>
                     <th style="text-align:center">Ports</th>
+                    <th>Tasks</th>
                     <th>SVN</th>
                     <th>Database</th>
                     <th>DB Loaded</th>
                     <th>Change DB</th>
                     <th>Clear Logs</th>
                     <th>Clear Cache</th>
-                    <th>Delete Server</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server1">+</div>ebase</td>
+                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server1"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div>ebase</td>
                     <td style="text-align:center"><label class="label label-success">80</label> | <label class="label label-success">443</label></td>
+                    <td>T07050</td>
                     <td>/trunk</td>
                     <td>dms_db</td>
                     <td>Jan 10 2017</td>
                     <td>
                       <div class="input-group">
                         <select class="form-control input-sm" id="sel1">
+                          <option disabled selected value> -- select an database -- </option>
                           <option>client1_db</option>
                           <option>client2_db</option>
                           <option>client3_db</option>
@@ -84,23 +87,26 @@
                     </td>
                     <td><button class="btn btn-primary btn-sm">Clear Logs</button></td>
                     <td><button class="btn btn-primary btn-sm">Clear Cache</button></td>
-                    <td><button class="btn btn-danger btn-sm">X Delete</button></td>
+                    
                   </tr>
-                  <tr class="collapse out server1">
+                  <tr id="serverInfo" class="collapse out server1">
                     <td colspan="8">
                       <h5>Server 1</h5>
-                      <p>Server 1 information</p>
+                      <div class=""></div>
+                      <button class="btn btn-danger btn-sm">X Delete</button>
                     </td>
                   </tr>
                   <tr>
-                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server2">+</div>ebase1</td>
+                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server2"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div>ebase1</td>
                     <td style="text-align:center"><label class="label label-danger">80</label> | <label class="label label-danger">443</label></td>
+                    <td>T07060</td>
                     <td>ebase-dev/T01234</td>
                     <td>client1_db</td>
                     <td>Feb 23 2017</td>
                     <td>
                       <div class="input-group">
                         <select class="form-control input-sm" id="sel1">
+                          <option disabled selected value> -- select an database -- </option>
                           <option>client1_db</option>
                           <option>client2_db</option>
                           <option>client3_db</option>
@@ -113,23 +119,25 @@
                     </td>
                     <td><button class="btn btn-primary btn-sm">Clear Logs</button></td>
                     <td><button class="btn btn-primary btn-sm">Clear Cache</button></td>
-                    <td><button class="btn btn-danger btn-sm">X Delete</button></td>
                   </tr>
-                  <tr class="collapse out server2">
+                  <tr id="serverInfo" class="collapse out server2">
                     <td colspan="8">
                       <h5>Server 2</h5>
                       <p>Server 2 information</p>
+                      <button class="btn btn-danger btn-sm">X Delete</button>
                     </td>
                   </tr>
                   <tr>
-                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server3">+</div>ebase2</td>
+                    <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server3"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div>ebase2</td>
                     <td style="text-align:center"><label class="label label-danger">80</label> | <label class="label label-danger">443</label></td>
+                    <td>T07075</td>
                     <td>ebase-dev/T01234</td>
                     <td>client4_db</td>
                     <td>Mar 23 2017</td>
                     <td>
                       <div class="input-group">
                         <select class="form-control input-sm" id="sel1">
+                          <option disabled selected value> -- select an database -- </option>
                           <option>client1_db</option>
                           <option>client2_db</option>
                           <option>client3_db</option>
@@ -142,12 +150,12 @@
                     </td>
                     <td><button class="btn btn-primary btn-sm">Clear Logs</button></td>
                     <td><button class="btn btn-primary btn-sm">Clear Cache</button></td>
-                    <td><button class="btn btn-danger btn-sm">X Delete</button></td>
                   </tr>
-                  <tr class="collapse out server3">
+                  <tr id="serverInfo" class="collapse out server3">
                     <td colspan="8">
                       <h5>Server 3</h5>
                       <p>Server 3 information</p>
+                      <button class="btn btn-danger btn-sm">X Delete</button>
                     </td>
                   </tr>
                 </tbody>
@@ -269,11 +277,17 @@
               <footer>
                 <p>&copy;</p>
               </footer>
-            </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            </div> <!-- /container -->       
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
             <script src="js/vendor/bootstrap.min.js"></script>
 
             <script src="js/main.js"></script>
+            <script>
+              $('.label-default').on('click', function() {
+                $(this).find('span').closest('.chevron_toggleable').toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+              });
+
+            </script>
           </body>
           </html>
