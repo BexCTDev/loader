@@ -1,0 +1,12 @@
+// Version : 1.0
+{ "server" : [
+	{
+		"project_name" : "{{project_name}}",
+		"sql_file" : "{{sql_file_name}}",
+		"sql_checksum" : "{{sql_checksum}}",
+		"document_root" : "{{document_root}}",
+		"task_number" : "{{task_number}}",
+		"task_description" : "{{task_description}}",
+		"notes" : "{{notes}}"
+	}
+]}

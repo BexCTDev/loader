@@ -1,0 +1,113 @@
+
+2017-03-29 00:15:06 [DANGER] - wow that was Close
+2017-03-29 00:15:18 [DANGER] - wow that was Close
+2017-03-29 00:15:19 [DANGER] - wow that was Close
+2017-03-29 00:15:19 [DANGER] - wow that was Close
+2017-03-29 00:21:14 [DANGER] - TEST FOR WRITE LOGS
+2017-03-29 00:22:02 [DANGER] - TEST FOR WRITE LOGS
+2017-03-29 00:22:40 [DANGER] - TEST FOR WRITE LOGS
+2017-03-29 00:22:40 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test
+2017-03-29 00:25:55 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:25:55 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test
+2017-03-29 00:25:55 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test1
+2017-03-29 00:29:28 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:29:28 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test
+2017-03-29 00:29:28 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test1
+2017-03-29 00:29:30 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:29:30 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test
+2017-03-29 00:29:30 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test1
+2017-03-29 00:30:05 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:30:42 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:30:42 [SUCCESS] - Directory has been cleared : c:\webserver\htdocs\ebaseloader\test
+2017-03-29 00:30:43 [SUCCESS] - Directory has been cleared and removed : c:\webserver\htdocs\ebaseloader\test1
+2017-03-29 00:37:31 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:57:42 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:57:42 [DANGER] - Could find file : \test001.txt
+2017-03-29 00:57:42 [DANGER] - Could find file : \test001.txt
+2017-03-29 00:58:16 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:58:16 [DANGER] - Could find file : c:\webserver\htdocs\ebaseloader\test1\test001.txt
+2017-03-29 00:58:16 [DANGER] - Could find file : c:\webserver\htdocs\ebaseloader\test1\test001.txt
+2017-03-29 00:58:40 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 00:59:36 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:00:30 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:01:59 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:02:02 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:02:13 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:02:15 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:02:23 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:02:24 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:03:23 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:03:56 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:04:15 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:04:39 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:04:55 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:05:06 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:37:10 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:37:10 [DANGER] - Could not open dir : 
+2017-03-29 01:37:10 [DANGER] - Could not open dir : 
+2017-03-29 01:37:10 [SUCCESS] - File has been cleared : /test0003.txt
+2017-03-29 01:40:11 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:40:40 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:41:08 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:45:29 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:45:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:45:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:45:49 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:48:07 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:48:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:48:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:49:57 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:49:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:49:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:49:57 [DANGER] - All files not removed ( File Count = 1 ) from dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:49:57 [DANGER] - Could not remove dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:49:57 [DANGER] - File has NOT been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:51:36 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:51:36 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:51:36 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:51:36 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:51:36 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:51:36 [DANGER] - All files not removed ( File Count = 1 ) from dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:51:36 [DANGER] - Could not remove dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:51:36 [DANGER] - Could find file : 
+2017-03-29 01:51:36 [DANGER] - File has NOT been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:51:54 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:51:54 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:51:54 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:51:54 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:51:54 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:51:54 [DANGER] - All files not removed ( File Count = 1 ) from dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:51:54 [DANGER] - Could not remove dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:51:54 [DANGER] - Could find file : 
+2017-03-29 01:51:54 [DANGER] - File has NOT been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:52:39 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:52:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:52:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:52:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:52:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:52:39 [DANGER] - All files not removed ( File Count = 1 ) from dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:52:39 [DANGER] - Could not remove dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:52:39 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:57:01 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:57:22 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:57:22 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:57:22 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:57:22 [SUCCESS] - Directory has been cleared and removed : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:57:22 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:58:28 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:58:28 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:58:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:58:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 01:58:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:58:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 01:58:28 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:58:28 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:58:28 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 01:58:56 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 01:58:56 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:58:56 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 01:58:56 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:58:56 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 01:58:56 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
