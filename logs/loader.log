@@ -111,3 +111,369 @@
 2017-03-29 01:58:56 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test2
 2017-03-29 01:58:56 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test2
 2017-03-29 01:58:56 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 21:18:55 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:37:15 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:37:15 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test/test0001.txt
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test/test0001.txt
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1/test0003.txt
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1/test0003.txt
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test2/test0008.txt
+2017-03-29 21:37:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test2/test0008.txt
+2017-03-29 21:45:49 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:45:49 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test/test0001.txt
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test/test0001.txt
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1/test0003.txt
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test1/test0003.txt
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test2/test0008.txt
+2017-03-29 21:45:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/public/ebaseloader/test2/test0008.txt
+2017-03-29 21:50:31 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:50:43 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:50:43 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 21:50:43 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 21:50:43 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 21:50:43 [SUCCESS] - Directory has been cleared : C:/webserver/htdocs/ebaseloader/test2
+2017-03-29 21:50:43 [SUCCESS] - File has been cleared : C:/webserver/htdocs/ebaseloader/test3/test0003.txt
+2017-03-29 21:58:35 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 21:58:35 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 21:58:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 21:58:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 21:58:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 21:58:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:02:40 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:02:40 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:02:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:02:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:02:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:02:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:07 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:05:07 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:05:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:30 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:05:30 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:05:30 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:30 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:30 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:30 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:41 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:05:41 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:05:41 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:41 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:05:41 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:05:41 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:10:14 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:10:14 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:10:14 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:10:14 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:10:14 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:10:14 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:10:16 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:10:16 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:19:35 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:19:35 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:19:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:19:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:19:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:19:35 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:24:02 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:24:02 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:24:02 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:24:02 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:24:02 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:24:02 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:34 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:25:34 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:25:34 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:34 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:34 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:34 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:44 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:25:44 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:25:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:58 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:25:58 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:25:58 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:58 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:25:58 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:25:58 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:29:56 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:29:56 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:29:56 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:29:56 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:29:56 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:29:56 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:32:44 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:32:44 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:32:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:32:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:32:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:32:44 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:32:47 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:32:47 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:32:47 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:32:47 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:32:47 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:32:47 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:48:33 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:48:33 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:48:33 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:48:33 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:48:33 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:48:33 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:49:45 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:49:45 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:49:45 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:49:45 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:49:45 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:49:45 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:50:27 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:50:27 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:50:27 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:50:27 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:50:27 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:50:27 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:50:57 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:50:57 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:50:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:50:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:50:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:50:57 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:52:48 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:52:48 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:52:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:52:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:52:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:52:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:04 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:55:04 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:55:04 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:04 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:04 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:04 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:07 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:55:07 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:55:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:07 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:28 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:55:28 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:55:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:55:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:55:28 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:59:40 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:59:40 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:59:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:59:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:59:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:59:40 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:59:52 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 22:59:52 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 22:59:52 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:59:52 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 22:59:52 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 22:59:52 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:00:17 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:00:17 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:00:17 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:00:17 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:00:17 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:00:17 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:00:17 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:00:21 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:00:21 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:00:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:00:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:00:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:00:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:00:21 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:03:51 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:03:51 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:03:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:03:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:03:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:03:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:03:51 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:05:15 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:05:15 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:05:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:05:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:05:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:05:15 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:05:15 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:09:29 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:09:29 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:09:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:09:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:09:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:09:29 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:09:29 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:10:16 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:10:16 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:10:16 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:10:16 [DANGER] - Failed to Connect to MySQL : 
+2017-03-29 23:11:53 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:11:53 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:11:53 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:11:53 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:11:53 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:11:53 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:12:46 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:12:46 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:12:46 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:12:46 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:12:46 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:12:46 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:12:48 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:12:48 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:12:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:12:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:12:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:12:48 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:13:51 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:13:51 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:13:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:13:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:13:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:13:51 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:13:51 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: YES)
+2017-03-29 23:14:12 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:14:12 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:14:12 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:14:12 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:14:12 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:14:12 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:14:49 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:14:49 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:14:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:14:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:14:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:14:49 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:15:13 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:15:13 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:15:13 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:15:13 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:15:13 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:15:13 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:15:13 [DANGER] - Failed to Connect to MySQL : Access denied for user 'root'@'localhost' (using password: NO)
+2017-03-29 23:15:21 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:15:21 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:15:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:15:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:15:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:15:21 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:16:39 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:16:39 [DANGER] - Could not open dir : C:/webserver/htdocs/ebaseloader/test1
+2017-03-29 23:16:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:16:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test1/test0003.txt
+2017-03-29 23:16:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:16:39 [DANGER] - Could find file : C:/webserver/htdocs/ebaseloader/test2/test0008.txt
+2017-03-29 23:17:02 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:18:57 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:20:16 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:20:48 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:22:12 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:34:01 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:34:01 [DANGER] - SQL query failed : CREATE DATABSE acb
+2017-03-29 23:34:01 [SUCCESS] - Datbase has been deleted : acb
+2017-03-29 23:34:25 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:34:25 [DANGER] - SQL query failed : CREATE DATABSE acb
+2017-03-29 23:34:25 [SUCCESS] - Datbase has been deleted : aacb
+2017-03-29 23:35:24 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:35:24 [DANGER] - SQL query failed : CREATE DATABSE acb
+2017-03-29 23:35:24 [DANGER] - SQL query failed : DROP DATABASE aacb
+2017-03-29 23:36:23 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:36:23 [DANGER] - SQL query failed : CREATE DATABSE `acb`
+2017-03-29 23:36:23 [DANGER] - SQL query failed : DROP DATABASE `aacb`
+2017-03-29 23:37:28 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:37:28 [DANGER] - SQL query failed : CREATE DATABSE 'acb'
+2017-03-29 23:37:28 [DANGER] - SQL query failed : DROP DATABASE 'aacb'
+2017-03-29 23:39:39 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:39:39 [DANGER] - SQL query failed : CREATE DATABSE 'acb' | 
+2017-03-29 23:39:39 [DANGER] - SQL query failed : DROP DATABASE 'aacb' | 
+2017-03-29 23:40:04 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:40:04 [DANGER] - SQL query failed : CREATE DATABSE 'acb' | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABSE 'acb'' at line 1
+2017-03-29 23:40:04 [DANGER] - SQL query failed : DROP DATABASE 'aacb' | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''aacb'' at line 1
+2017-03-29 23:41:03 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:41:03 [DANGER] - SQL query failed : CREATE DATABSE  | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABSE' at line 1
+2017-03-29 23:41:03 [DANGER] - SQL query failed : DROP DATABASE  | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2017-03-29 23:41:23 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:41:23 [DANGER] - SQL query failed : CREATE DATABSE acb | You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABSE acb' at line 1
+2017-03-29 23:41:23 [DANGER] - SQL query failed : DROP DATABASE aacb | Can't drop database 'aacb'; database doesn't exist
+2017-03-29 23:41:46 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:43:20 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:43:20 [DANGER] - SQL query failed : CREATE DATABASE acb | Can't create database 'acb'; database exists
+2017-03-29 23:43:20 [DANGER] - SQL query failed : DROP DATABASE aacb | Can't drop database 'aacb'; database doesn't exist
+2017-03-29 23:43:43 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:43:43 [DANGER] - SQL query failed : CREATE DATABASE acb | Can't create database 'acb'; database exists
+2017-03-29 23:44:50 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:45:36 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:45:36 [DANGER] - SQL query failed : CREATE DATABASE acb | Can't create database 'acb'; database exists
+2017-03-29 23:45:42 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:46:25 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:48:02 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:49:31 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:49:31 [SUCCESS] - Database Created : acb
+2017-03-29 23:49:31 [SUCCESS] - Database Deleted : acb
+2017-03-29 23:55:26 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:55:26 [SUCCESS] - Database Created : acb
+2017-03-29 23:55:26 [SUCCESS] - Database Deleted : acb
+2017-03-29 23:55:45 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:55:45 [SUCCESS] - Database Created : acb
+2017-03-29 23:56:21 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-29 23:56:21 [SUCCESS] - Database Created : abc
+2017-03-29 23:56:21 [SUCCESS] - Database Created : a123
+2017-03-29 23:56:21 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:01:20 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:01:20 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:01:20 [SUCCESS] - Database Created : abc
+2017-03-30 00:01:20 [SUCCESS] - Database Created : a123
+2017-03-30 00:01:20 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:01:20 [DANGER] - Could not open file : C:/webserver/htdocs/ebaseloader/templates/template.sql
+2017-03-30 00:02:14 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:02:14 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:02:14 [SUCCESS] - Database Created : abc
+2017-03-30 00:02:14 [SUCCESS] - Database Created : a123
+2017-03-30 00:02:14 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:02:14 [DANGER] - Failed to load database : datbase with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql
+2017-03-30 00:03:18 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:03:18 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:03:18 [SUCCESS] - Database Created : abc
+2017-03-30 00:03:18 [SUCCESS] - Database Created : a123
+2017-03-30 00:03:18 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:03:19 [SUCCESS] - Database has been anonymized : datbase
+2017-03-30 00:03:19 [SUCCESS] - Database has been loaded : datbase with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql and database has been Anonymized.
+2017-03-30 00:04:20 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:04:20 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:04:20 [SUCCESS] - Database Created : abc
+2017-03-30 00:04:20 [SUCCESS] - Database Created : a123
+2017-03-30 00:04:20 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:04:20 [DANGER] - Failed to load database : abc with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql
+2017-03-30 00:06:12 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:06:12 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:06:12 [SUCCESS] - Database Created : abc
+2017-03-30 00:06:12 [SUCCESS] - Database Created : a123
+2017-03-30 00:06:12 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:06:13 [SUCCESS] - Database has been anonymized : 
+2017-03-30 00:06:13 [SUCCESS] - Database has been loaded : database with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql and database has been Anonymized.
+2017-03-30 00:06:35 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 00:06:35 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 00:06:35 [SUCCESS] - Database Created : abc
+2017-03-30 00:06:35 [SUCCESS] - Database Created : a123
+2017-03-30 00:06:35 [SUCCESS] - Database Deleted : a123
+2017-03-30 00:06:35 [DANGER] - Failed to load database : acb with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql

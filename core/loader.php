@@ -1,14 +1,30 @@
-y<?php
+<?php
 // Version : 1.0
 // Loader Class
-class Loader {
+class Loader{
 	
-
-
 	function __construct()
 	{
-		require('config.php');
+		require("config.php");
+		require("db.php");
+		$this->db = new DB($config);
 		$this->log_file = $config['loader']['logs'] . '/loader.log';
+	}
+
+	function testmode($mode = 1)
+	{
+		if($mode > 3) { $mode =1; }
+		if($mode == 1) {
+			$data['file_tests'] = false;
+			$data['reset_test'] = false;
+		} elseif($mode == 2) {  // RESET FILES
+			$data['file_tests'] = false;
+			$data['reset_test'] = true;
+		}elseif($mode == 3) { // FULL TEST WITH FILES
+			$data['file_tests'] = true;
+			$data['reset_test'] = false;
+		}
+		return $data;
 	}
 
 	public function write_log($level = 'danger', $message, $file = false) {
@@ -128,55 +144,65 @@ class Loader {
 		} 
 	}
 
-
-
-	public function create_db ($datbase) {
-		$sql = 'CREATE DATABSE '.$datbase;
-		$message = $this->write_log('success', 'Datbase has been created : '.$datbase);
-		return $message;
+	public function mysql_test() {
+		$q = $this->db->query('SHOW DATABASES;');
+		if($q) {
+			return $q;	
+		}
 	}
 
-	public function delete_db ($datbase) {
-		$sql = 'DROP DATABASE '.$datbase;
-		$message = $this->write_log('success', 'Datbase has been deleted : '.$datbase);
-		return $message;
+	public function create_db ($database) {
+		$q = $this->db->query("CREATE DATABASE " . $database);
+		if($q) {
+			$message = $this->write_log('success', 'Database Created : ' . $database);
+			return $message;	
+		}
+	}
+
+	public function delete_db ($database) {
+		$q = $this->db->query("DROP DATABASE " . $database);
+		if($q) {
+			$message = $this->write_log('success', 'Database Deleted : ' . $database);
+			return $message;	
+		}
 	}
 
 	public function load_database ($database, $file, $anonymise = true) {
-		$conn = mysqli_connect("localhost", "my_user", "my_password", $database);
-
-		$handle = fopen($file, "r");
-		if ($handle) {
-			fclose($handle);
-			$sqlSource = file_get_contents($file);
-		} else {
-			$message = $this->write_log('danger', 'Could not open file : '.$file);
-			return $message;
-		} 
-		if(mysqli_multi_query($sql,$sqlSource)) {
-			if($anonymise == true) {
-				if($this->anonymize($database)) {
-					$message = $this->write_log('success', 'Database has been loaded : '.datbase.' with file : '. $file.' and database has been Anonymized.');
-					return $message;		
+		$q = $this->db->connect($database);
+		if($q) {
+			$handle = fopen($file, "r");
+			if ($handle) {
+				fclose($handle);
+				$sqlSource = file_get_contents($file);
+			} else {
+				$message = $this->write_log('danger', 'Could not open file : '.$file);
+				return $message;
+			} 
+			if(mysqli_multi_query($q,$sqlSource)) {
+				if($anonymise == true) {
+					if($this->anonymize($database)) {
+						$message = $this->write_log('success', 'Database has been loaded : '.database.' with file : '. $file.' and database has been Anonymized.');
+						return $message;		
+					}
 				}
-			}
-			$message = $this->write_log('success', 'Database has been loaded : '.datbase.' with file : '. $file);
-			return $message;
-		} else {
-			$message = $this->write_log('danger', 'Failed to load database : '.datbase .' with file : '. $file);
-			return $message;
-		} 
+				$message = $this->write_log('success', 'Database has been loaded : ' .$datbase.' with file : '. $file);
+				return $message;
+			} else {
+				$message = $this->write_log('danger', 'Failed to load database : ' . $database .' with file : '. $file);
+				return $message;
+			} 
+		}
 	}
 
-	public function anonymize ($datbase) {
+	public function anonymize ($database) {
 	// Connect
 	// Anonymize date.. copy ebase script
-		if($success) {
+		if(true) {
 
-			$message = $this->write_log('success', 'Database has been anonymized : '.datbase);
+			$message = $this->write_log('success', 'Database has been anonymized : ' . $database);
 			return true;
 		} else {
-			$message = $this->write_log('danger', 'Failed to Anonymize database : '.datbase);
+			$message = $this->write_log('danger', 'Failed to Anonymize database : ' . $database);
 			return false;
 		} 
 	}
