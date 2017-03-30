@@ -477,3 +477,15 @@
 2017-03-30 00:06:35 [SUCCESS] - Database Created : a123
 2017-03-30 00:06:35 [SUCCESS] - Database Deleted : a123
 2017-03-30 00:06:35 [DANGER] - Failed to load database : acb with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql
+2017-03-30 07:19:08 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 07:19:08 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 07:19:08 [SUCCESS] - Database Created : abc
+2017-03-30 07:19:08 [SUCCESS] - Database Created : a123
+2017-03-30 07:19:08 [SUCCESS] - Database Deleted : a123
+2017-03-30 07:19:08 [DANGER] - Failed to load database : acb with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql
+2017-03-30 07:19:14 [SUCCESS] - TEST FOR WRITE LOGS
+2017-03-30 07:19:14 [DANGER] - SQL query failed : CREATE DATABASE abc | Can't create database 'abc'; database exists
+2017-03-30 07:19:14 [SUCCESS] - Database Created : abc
+2017-03-30 07:19:14 [SUCCESS] - Database Created : a123
+2017-03-30 07:19:14 [SUCCESS] - Database Deleted : a123
+2017-03-30 07:19:14 [DANGER] - Failed to load database : acb with file : C:/webserver/htdocs/ebaseloader/core/templates/template.sql

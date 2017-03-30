@@ -207,7 +207,7 @@ class Loader{
 		} 
 	}
 
-	public function check_anonymize ($datbase) {
+	public function check_anonymize ($database) {
 	// Run test to ensure data is anonymized used as an informational check and warning marker on server screen
 		if($success) {
 
@@ -216,6 +216,28 @@ class Loader{
 		} else {
 			return false;
 		} 
+	}
+
+	public function get_db_config($virtualhost) {
+		$handle = fopen($file, "r");
+		if ($handle) {
+			while (($line = fgets($handle)) !== false) {
+				if(strpos($line, 'username') > 0) {
+					$data['username'] = $line;
+				} elseif(strpos($line, 'password') > 0) {
+					$data['password'] = $line;
+				} elseif(strpos($line, 'database') > 0) {
+					$data['database'] = $line;
+				} elseif(strpos($line, 'database') > 0) {
+					$data['hostname'] = $line;
+				}
+			}
+			fclose($handle);
+		} else {
+			$message = $this->write_log('danger', 'Could not open file');
+			return $message;
+		}
+		return $data;
 	}
 
 	public function update_config_db_multi($args) {
@@ -236,7 +258,7 @@ class Loader{
 						$data[] = '$db[\'default\'][\'username\'] = \''.$username.'\';';
 					}
 				}
-				elseif (isset($args['username'])) {
+				elseif (isset($args['password'])) {
 					if(strpos($line, 'password') > 0) {
 						$data[] = '$db[\'default\'][\'password\'] = \''.$password.'\';';
 					}

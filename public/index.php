@@ -9,7 +9,7 @@ echo '<pre>';
 print_r($config);
 echo '</pre>';
 
-$test = $config['loader']['root'] . 'test';
+$test = $config['loader']['root'] . 'testing/test';
 $tests = array(1, 2, 3);
 
 $testmode = $loader->testmode(1);
