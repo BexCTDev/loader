@@ -251,6 +251,7 @@ class Loader {
 	}
 
 	// HTML JSON AND DATA REQUESTS
+	// ---------------------------------------------------------------------------
 	private function check_server($url, $port)
     {
         if ($socket =@ fsockopen($url, $port, $errno, $errstr, 30)) {
@@ -322,7 +323,7 @@ class Loader {
 			}
 			fclose($handle);
 		} else {
-			$message = $this->write_log('danger', 'Could not open file DB' . $file);
+			$message = $this->write_log('danger', 'Could not open file for <u>' .$virtualhost. '</u> : ' . $file);
 			return $message;
 		}
 		return $data;

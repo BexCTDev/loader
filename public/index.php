@@ -22,15 +22,17 @@ include("views/nav.php");
     </thead>
     <tbody>
       <?php foreach ($apache_data as $config) : ?>
-        <?php echo '<pre>'; ?>
-        <?php print_r($config);?>
-        <?php echo '</pre>'; ?>
       <tr>
-        <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server1"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div>ebase</td>
-        <td style="text-align:center"><label class="label label-success">80</label> | <label class="label label-success">443</label></td>
+        <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server1"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div><?php echo ucfirst($config['Name']); ?></td>
+        <td style="text-align:center">
+          <?php foreach ($config['Ports'] as $port => $status) : ?>
+            <?php ($status == 1) ? $label = 'success' : $label = 'danger'; ?>
+            <span class="label label-<?php echo $label; ?>"><?php echo $port; ?></span>
+          <?php endforeach; ?>
+        </td>
         <td>T07050</td>
         <td>/trunk</td>
-        <td>dms_db</td>
+        <td><?php echo ($config['Database']['database']) ? $config['Database']['database'] : 'No DB Selected' ; ?></td>
         <td>Jan 10 2017</td>
         <td>
           <div class="input-group">
@@ -53,7 +55,11 @@ include("views/nav.php");
       <tr id="serverInfo" class="collapse out server1">
         <td colspan="8">
           <h5>Server 1</h5>
-          <div class=""></div>
+          <div class="">
+            <?php echo '<pre>'; ?>
+            <?php print_r($config);?>
+            <?php echo '</pre>'; ?>
+          </div>
           <button class="btn btn-danger btn-sm">X Delete</button>
         </td>
       </tr>
