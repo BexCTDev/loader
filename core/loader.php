@@ -184,20 +184,43 @@ class Loader {
 		}
 	}
 
+	public function get_databases()
+    {
+        $result = $this->db->query('SHOW DATABASES;');
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                if (!in_array($row['Database'], array('performance_schema', 'information_schema', 'mysql'))) {
+                    $data[] = $row['Database'].'<br>';
+                }
+           }
+        } else {
+            $message = $this->write_log('danger', 'Could not return Database List');
+			return $message;
+        }
+        return $data;
+    }
+
 	public function create_db ($database) {
 		$q = $this->db->query("CREATE DATABASE " . $database);
 		if($q) {
 			$message = $this->write_log('success', 'Database Created : ' . $database);
 			return $message;	
-		}
-	}
+		} else {
+            $message = $this->write_log('danger', 'Could not return create Database :' . $database);
+			return $message;
+        }
+	} 
 
 	public function delete_db ($database) {
 		$q = $this->db->query("DROP DATABASE " . $database);
 		if($q) {
 			$message = $this->write_log('success', 'Database Deleted : ' . $database);
 			return $message;	
-		}
+		} else {
+            $message = $this->write_log('danger', 'Could not return create Database :' . $database);
+			return $message;
+        }
 	}
 
 	public function load_database ($database, $sqlfile, $anonymise = true) {

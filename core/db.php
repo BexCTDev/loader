@@ -35,5 +35,6 @@ class DB extends Loader {
 			$message = $this->write_log('danger', 'Failed to Connect to MySQL : ' . $db['error']);
 			return $message;
 		}
+		$conn->close();
 	}
 }

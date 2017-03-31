@@ -37,7 +37,7 @@ include("views/nav.php");
         <td>
           <div class="input-group">
             <select class="form-control input-sm" id="sel1">
-              <option disabled selected value> -- select an database -- </option>
+              <option disabled selected value> -- select a database -- </option>
               <option>client1_db</option>
               <option>client2_db</option>
               <option>client3_db</option>
