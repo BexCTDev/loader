@@ -1,18 +1,18 @@
+<?php // Version : 1.0 ?>
 <?php
-// Version : 1.0
+
 // Loader Class
-class Loader{
+class Loader {
 	
-	function __construct()
-	{
-		require("config.php");
+	function __construct() {
 		require("db.php");
-		$this->db = new DB($config);
-		$this->log_file = $config['loader']['logs'] . '/loader.log';
+		$this->db = new DB();
+		$this->log_file = LOADER_LOGS . '/loader.log';
 	}
 
-	function testmode($mode = 1)
-	{
+	function testmode($mode = 1) {
+	// Only used with fn_test.php
+	// MODES : 1 = Normal | 2 = Resets Test Files  | 3 = Runs test file modification
 		if($mode > 3) { $mode =1; }
 		if($mode == 1) {
 			$data['file_tests'] = false;
@@ -27,8 +27,11 @@ class Loader{
 		return $data;
 	}
 
+	// MESSAGE AND ERROR HANDLING
+	// ---------------------------------------------------------------------------
 	public function write_log($level = 'danger', $message, $file = false) {
-		// $level = danger, warning, success
+	// Write to log and deliver a notification message
+	// $level = danger, warning, success
 		(!$file) ? $file = $this->log_file : '' ;
 		$handle = fopen($file, "a");
 		if ($handle) {
@@ -43,8 +46,8 @@ class Loader{
 		}
 	}
 
-	public function build_message($messages) {
-		$html = '<div class="alert alert-{{LEVEL}} alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>{{LEVEL}} : </strong> {{BODY}}</div>';
+	private function build_message($messages) {
+		$html = '<div class="alert alert-{{LEVEL}} alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>{{LEVELUP}} : </strong> {{BODY}}</div>';
 		$msg = '';
 		if(isset($messages[0])) {			
   			$body = '';
@@ -52,11 +55,28 @@ class Loader{
 				$msg .= str_replace(array("{{LEVELUP}}", "{{LEVEL}}", "{{BODY}}"), array(strtoupper($level), $level, $message), $html);
 			}
 		} else {
-			$msg .= str_replace(array("{{LEVELUP}}", "{{LEVEL}}", "{{BODY}}"), array(key($messages), strtoupper(key($messages)), $messages[key($messages)]), $html);
+			$msg .= str_replace(array("{{LEVELUP}}", "{{LEVEL}}", "{{BODY}}"), array(strtoupper(key($messages)), key($messages), $messages[key($messages)]), $html);
 		}
-		return $msg;
+		$_SESSION['message'] .= $msg;
+		return false;
 	}
 
+	public function messages_handler($messages) {
+	// DELETE ME
+		
+		$message = '';
+		if(count($messages > 0)) {
+			foreach ($messages as $message){
+				$message .= '<div class="' . key($message) .'">' . current($message) .'</div>';
+			}
+		} else {
+			$message .= '<div class="' . key($message) .'">' . current($message) .'</div>';
+		}
+		return $message;
+	}
+
+	// REMOVING FILES
+	// ---------------------------------------------------------------------------
 	public function clear_directory($dir, $rmdir = false) {
 		if (is_dir($dir)  && strlen($dir) > 10) { //make sure that its not the root folder
 			$opendir = opendir($dir);
@@ -95,6 +115,34 @@ class Loader{
 		}
 	}
 
+	public function clear_file($file) {
+		$handle = fopen($file, "w");
+		if ($handle) {
+			fwrite($handle, '');
+			fclose($handle);
+			if($this->get_filesize($file) == "0.00B") {
+				$message = $this->write_log('success', 'File has been cleared : '.$file);
+			} else {
+				$message = $this->write_log('danger', 'File has NOT been cleared : '.$file);
+			}
+			return $message;
+		} else {
+			$message = $this->write_log('danger', 'Could not open file : '.$file);
+			return $message;
+		} 
+	}
+
+	// PROCESSING FILES
+	// ---------------------------------------------------------------------------
+ 	public function get_files($path) {
+        $files = array();
+        $configFiles = array_diff(scandir($path), array('..', '.'));
+        foreach ($configFiles as $file) {
+             $files[] = $path.$file;
+        }
+        return $files;
+    }
+
 	public function count_files($dir) {
 		if(file_exists($dir)) {
 			return (count(scandir($dir)) - 2);
@@ -127,23 +175,8 @@ class Loader{
 		}
 	}
 
-	public function clear_file($file) {
-		$handle = fopen($file, "w");
-		if ($handle) {
-			fwrite($handle, '');
-			fclose($handle);
-			if($this->get_filesize($file) == "0.00B") {
-				$message = $this->write_log('success', 'File has been cleared : '.$file);
-			} else {
-				$message = $this->write_log('danger', 'File has NOT been cleared : '.$file);
-			}
-			return $message;
-		} else {
-			$message = $this->write_log('danger', 'Could not open file : '.$file);
-			return $message;
-		} 
-	}
-
+	// MYSQL FUNCTIONS
+	// ---------------------------------------------------------------------------
 	public function mysql_test() {
 		$q = $this->db->query('SHOW DATABASES;');
 		if($q) {
@@ -167,35 +200,34 @@ class Loader{
 		}
 	}
 
-	public function load_database ($database, $file, $anonymise = true) {
+	public function load_database ($database, $sqlfile, $anonymise = true) {
 		$q = $this->db->connect($database);
 		if($q) {
-			$handle = fopen($file, "r");
+			$handle = fopen($sqlfile, "r");
 			if ($handle) {
 				fclose($handle);
-				$sqlSource = file_get_contents($file);
+				$sqlSource = file_get_contents($sqlfile);
 			} else {
-				$message = $this->write_log('danger', 'Could not open file : '.$file);
+				$message = $this->write_log('danger', 'Could not open file : '.$sqlfile);
 				return $message;
 			} 
 			if(mysqli_multi_query($q,$sqlSource)) {
 				if($anonymise == true) {
 					if($this->anonymize($database)) {
-						$message = $this->write_log('success', 'Database has been loaded : '.database.' with file : '. $file.' and database has been Anonymized.');
+						$message = $this->write_log('success', 'Database has been loaded : '.database.' with file : '. $sqlfile.' and database has been Anonymized.');
 						return $message;		
 					}
 				}
-				$message = $this->write_log('success', 'Database has been loaded : ' .$datbase.' with file : '. $file);
+				$message = $this->write_log('success', 'Database has been loaded : ' .$datbase.' with file : '. $sqlfile);
 				return $message;
 			} else {
-				$message = $this->write_log('danger', 'Failed to load database : ' . $database .' with file : '. $file);
+				$message = $this->write_log('danger', 'Failed to load database : ' . $database .' with file : '. $sqlfile);
 				return $message;
 			} 
 		}
 	}
 
 	public function anonymize ($database) {
-	// Connect
 	// Anonymize date.. copy ebase script
 		if(true) {
 
@@ -218,34 +250,82 @@ class Loader{
 		} 
 	}
 
+	// HTML JSON AND DATA REQUESTS
+	private function check_server($url, $port)
+    {
+        if ($socket =@ fsockopen($url, $port, $errno, $errstr, 30)) {
+            return 1;
+            fclose($socket);
+        } else {
+            return 0;
+        }
+    }
+
+	// MODIFY CONFIG FILES 
+	// ---------------------------------------------------------------------------
+	public function get_apache_data($files)
+	// GETS THE SERVER INFOMATION
+    {	
+        foreach ($files as $file) {
+        	if(strpos($file, '05') > 0) {
+	            $filebase = substr($file, strrpos($file, '/')+1);
+	            $handle = fopen($file, "r");
+	            if ($handle) {
+	            	$db_checked = 0;
+	                while (($line = fgets($handle)) !== false) {
+	                    if (strpos($line, '<VirtualHost') !== false) {
+	                        $port = substr($line, strpos($line, ':')+1, strpos($line, '>')-strpos($line, ':')-1);
+	                    }
+	                    if (strpos($line, 'ServerName') !== false) {
+	                        $Data[$filebase]['Servers'][$port]['ServerName'] = trim(substr($line, strpos($line, 'ServerName')+11));
+	                    }
+	                    if (strpos($line, 'ServerAlias') !== false) {
+	                        $Data[$filebase]['Servers'][$port]['ServerAlias'] = trim(substr($line, strpos($line, 'ServerAlias')+12));
+	                        $Data[$filebase]['Ports'][$port] = $this->check_server($Data[$filebase]['Servers'][$port]['ServerAlias'], $port);
+	                    }
+	                    if (strpos($line, 'DocumentRoot') !== false) {
+	                        $Data[$filebase]['DocumentRoot'] = str_replace('"', '', trim(substr($line, strpos($line, 'DocumentRoot')+13)));
+	                        $Data[$filebase]['ServerRoot'] = str_replace('public', '', $Data[$filebase]['DocumentRoot']);
+	                        $ServerRoot = $Data[$filebase]['ServerRoot'];
+	                        $Data[$filebase]['Name'] = str_replace('/', '', substr($ServerRoot, strpos($ServerRoot, 'htdocs')+7));
+	                        if($db_checked == 0) {
+		                        $Data[$filebase]['Database'] = $this-> get_db_config($Data[$filebase]['Name']);
+		                        $db_checked = 1;
+							}
+	                    }
+
+	                }
+	                fclose($handle);
+	            } else {
+	                $message = $this->write_log('danger', 'Could not open file' . $file);
+					return $message;
+	            }
+            }
+        }
+        return $Data;
+    }
+
 	public function get_db_config($virtualhost) {
-		$handle = fopen($file, "r");
+		$file = PATH_HTDOCS_ROOT . $virtualhost . '/ebase/development/config/database.php';
+		$handle = @fopen($file, "r");
 		if ($handle) {
 			while (($line = fgets($handle)) !== false) {
-				if(strpos($line, 'username') > 0) {
-					$data['username'] = $line;
+				if(strpos($line, 'hostname') > 0) {
+					$data['hostname'] = str_replace(array("'", ";", " ") , "",substr($line, strpos($line, "'",25) + 1));			
+				} elseif (strpos($line, 'username') > 0) {
+					$data['username'] = str_replace(array("'", ";", " ") , "",substr($line, strpos($line, "'",25) + 1));
 				} elseif(strpos($line, 'password') > 0) {
-					$data['password'] = $line;
+					$data['password'] = str_replace(array("'", ";", " ") , "",substr($line, strpos($line, "'",25) + 1));
 				} elseif(strpos($line, 'database') > 0) {
-					$data['database'] = $line;
-				} elseif(strpos($line, 'database') > 0) {
-					$data['hostname'] = $line;
+					$data['database'] = str_replace(array("'", ";", " ") , "",substr($line, strpos($line, "'",25) + 1));
 				}
 			}
 			fclose($handle);
 		} else {
-			$message = $this->write_log('danger', 'Could not open file');
+			$message = $this->write_log('danger', 'Could not open file DB' . $file);
 			return $message;
 		}
 		return $data;
-	}
-
-	public function update_config_db_multi($args) {
-	// $args[$file] = array ('database' => $database, 'username' => $username, 'password' => $password);
-		foreach ($args as $file => $data) {
-			$messages[] = $this->update_config_db($file, $data);
-		}
-		return $messages;
 	}
 
 	public function update_config_db($file, $args) {
@@ -292,15 +372,18 @@ class Loader{
 		} 
 	}
 
-	public function messages_handler($messages) {
-		$message = '';
-		if(count($messages > 0)) {
-			foreach ($messages as $message){
-				$message .= '<div class="' . key($message) .'">' . current($message) .'</div>';
-			}
-		} else {
-			$message .= '<div class="' . key($message) .'">' . current($message) .'</div>';
+	public function update_config_db_multi($args) {
+	// $args[$file] = array ('database' => $database, 'username' => $username, 'password' => $password);
+		foreach ($args as $file => $data) {
+			$messages[] = $this->update_config_db($file, $data);
 		}
-		return $message;
+		return $messages;
 	}
+
+	public function update_virtual_host(){
+	// Regenerate virtual hosts file.
+
+	}
+
+
 }

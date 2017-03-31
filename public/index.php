@@ -1,75 +1,65 @@
-<?php include('../core/config.php'); ?>
-<?php include('../core/loader.php'); ?>
-
+<?php // Version : 1.0 ?>
 <?php
-$loader = new Loader();
-
-
-echo '<pre>';
-print_r($config);
-echo '</pre>';
-
-$test = $config['loader']['root'] . 'testing/test';
-$tests = array(1, 2, 3);
-
-$testmode = $loader->testmode(1);
-//echo phpinfo();
-if($testmode['reset_test']){
-	foreach($tests as $number) {
-		$src = $test . '/';
-		$dst = $test . $number . '/';
-		$dir = opendir($src); 
-		@mkdir($dst); 
-		while(false !== ( $file = readdir($dir)) ) { 
-			if (( $file != '.' ) && ( $file != '..' )) { 
-				if ( is_dir($src . '/' . $file) ) { 
-					recurse_copy($src . '/' . $file,$dst . '/' . $file);
-				} 
-				else { 
-					copy($src . '/' . $file,$dst . '/' . $file); 
-				} 
-			} 
-		} 
-		closedir($dir); 
-		if(is_dir($test . $number)){
-			echo 'Created : '. $test . $number . '<br>';
-		} else {
-			echo 'Failed to create : '. $test . $number . '<br>';
-		}
-	}
-} else {
-	print_r("FN : write_log() | " . $loader->write_log('success', 'TEST FOR WRITE LOGS') . '<br>');
-	print_r("FN : count_files() | " . $loader->count_files($test . '1') . '<br>');
-
-	print_r("FN : get_filesize() | " . $loader->get_filesize($test . '/test0001.txt') . '<br>');
-	print_r("FN : get_filetime() | " . $loader->get_filetime($test . '/test0001.txt') . '<br>');
-	print_r("FN : get_filesize() | " . $loader->get_filesize($test . '1/test0003.txt') . '<br>');
-	print_r("FN : get_filetime() | " . $loader->get_filetime($test . '1/test0003.txt') . '<br>');
-	print_r("FN : get_filesize() | " . $loader->get_filesize($test . '2/test0008.txt') . '<br>');
-	print_r("FN : get_filetime() | " . $loader->get_filetime($test . '2/test0008.txt') . '<br>');
-
-	echo("<br>FN : mysql_test() | ");
-	print_r($loader->mysql_test());
-
-	echo("<br>FN : create_db() | ");
-	print_r($loader->create_db('abc'));
-
-	echo("<br>FN : create_db() | ");
-	print_r($loader->create_db('a123'));
-
-	echo("<br>FN : delete_db() | ");
-	print_r($loader->delete_db('a123'));
-
-	echo("<br>FN : load_database() | ");
-	print_r($loader->load_database('acb', $config['loader']['root'] . 'core/templates/template.sql'));
-
-	if($testmode['file_tests']) {
-		print_r("FN : clear_directory() | " . $loader->clear_directory($test . '1') . '<br>');
-		print_r("FN : clear_directory(and root) | " . $loader->clear_directory($test . '2', true) . '<br>');
-		print_r("FN : clear_file() | " . $loader->clear_file($test . '3' . '/test0003.txt') . '<br>');
-	}
-}
-die();
-
-
+include("views/header.php"); 
+include("views/nav.php"); 
 ?>
+<div class="container">
+
+  <table class="table table-condensed" style="font-size:10pt;">
+    <thead>
+      <tr>
+        <th>Server</th>
+        <th style="text-align:center">Ports</th>
+        <th>Tasks</th>
+        <th>SVN</th>
+        <th>Database</th>
+        <th>DB Loaded</th>
+        <th>Change DB</th>
+        <th>Clear Logs</th>
+        <th>Clear Cache</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($apache_data as $config) : ?>
+        <?php echo '<pre>'; ?>
+        <?php print_r($config);?>
+        <?php echo '</pre>'; ?>
+      <tr>
+        <td><div class="label label-default label-sm clickable" style="margin:-5px 5px 0 0" data-toggle="collapse" id="2" data-target=".server1"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></div>ebase</td>
+        <td style="text-align:center"><label class="label label-success">80</label> | <label class="label label-success">443</label></td>
+        <td>T07050</td>
+        <td>/trunk</td>
+        <td>dms_db</td>
+        <td>Jan 10 2017</td>
+        <td>
+          <div class="input-group">
+            <select class="form-control input-sm" id="sel1">
+              <option disabled selected value> -- select an database -- </option>
+              <option>client1_db</option>
+              <option>client2_db</option>
+              <option>client3_db</option>
+              <option>client4_db</option>
+            </select>
+            <span class="input-group-btn">
+              <button class="btn btn-warning btn-sm">Change DB</button>
+            </span>
+          </div>
+        </td>
+        <td><button class="btn btn-primary btn-sm">Clear Logs</button></td>
+        <td><button class="btn btn-primary btn-sm">Clear Cache</button></td>
+
+      </tr>
+      <tr id="serverInfo" class="collapse out server1">
+        <td colspan="8">
+          <h5>Server 1</h5>
+          <div class=""></div>
+          <button class="btn btn-danger btn-sm">X Delete</button>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+    </tbody>
+  </table>
+  <hr>
+  <?php include("views/index-modal.php"); ?>              
+  <?php include("views/footer.php"); ?>

@@ -1,11 +1,12 @@
+<?php // Version : 1.0 ?>
 <?php
 require_once "loader.php";
 class DB extends Loader {
-	public function __construct($args) {
-			$this->user = $args['db']['username'];
-			$this->password = $args['db']['password'];
-			$this->host = $args['db']['hostname'];
-			$this->log_file = $args['loader']['logs'] . '/loader.log';
+	public function __construct() {
+			$this->user = DB_USERNAME;
+			$this->password = DB_PASSWORD;
+			$this->host = DB_HOSTNAME;
+			$this->log_file = LOADER_LOGS . '/loader.log';
 	}
 	public function connect($database = false) {
 		if($database){

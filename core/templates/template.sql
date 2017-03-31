@@ -1,3 +1,4 @@
+## Version : 1.0
 CREATE TABLE Users (
   user_id INT NOT NULL AUTO_INCREMENT,
   email VARCHAR(80) NOT NULL,
