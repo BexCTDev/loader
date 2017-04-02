@@ -1,0 +1,32 @@
+LoadModule php5_module "C:/webserver/php56/php5apache2_4.dll"
+
+PHPIniDir "C:/webserver/php56"
+
+<FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+#NameVirtualHost *:80
+#NameVirtualHost *:443
+
+
+# SSL
+Listen 443
+
+AddType application/x-x509-ca-cert	.crt
+AddType application/x-pkcs7-crl		.crl
+
+
+SSLPassPhraseDialog builtin
+
+SSLSessionCache			"shmcb:C:/webserver/apache/logs/ssl_scache(512000)"
+SSLSessionCacheTimeout	300
+
+
+#SSLMutex default
+Mutex default ssl-cache
+
+
+
+# ImageMagick
+# SetEnv MAGICK_HOME "D:/ImageMagick-6.8.8-Q16"

@@ -1,0 +1,50 @@
+# Global configuration for eBase to be included in all VirtualHost entries
+
+# Variables -----
+  SetEnv CODEIGNITER_PATH	"C:/webserver/htdocs/codeigniter/"
+  SetEnv EBASE_PATH			"C:/webserver/htdocs/ebase/"
+
+# SSL -----
+  SSLEngine on
+  SSLCertificateFile "C:/webserver/apache/conf/ebase.ssl\ebasefm.com.crt"
+  SSLCertificateKeyFile "C:/webserver/apache/conf/ebase.ssl\ebasefm.com.key"
+  SSLCertificateChainFile "C:/webserver/apache/conf/ebase.ssl\ebasefm.com.bundle"
+  SSLProtocol -ALL +SSLv3 +TLSv1
+
+# URL Rewriting -----
+  RewriteEngine On
+
+  RewriteRule ^/$ /index.php [L]
+  RewriteRule ^/(robots\.txt|favicon\.ico|apple-touch-icon.*\.png|browserconfig\.xml)$ /shared/$1 [NC,PT,L]
+  RewriteRule ^/static/(css|js)x/(.+) /static/compact.php?$1=$2 [NC,PT,L]
+
+  RewriteRule ^/wpm http://exchange.ebasefm.com:8080/drawbase/static/index.html
+
+  RewriteCond $1 !^(index\.php|old_index\.php|static|shared|user_content|programs) [NC]
+  RewriteRule ^/(.*)$ /index.php?/$1 [PT,L]
+
+# Aliases -----
+  Alias /shared "C:/webserver/htdocs/ebase/shared"
+
+# Compression -----
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/x-javascript
+
+# Caching -----
+  ExpiresActive On
+  ExpiresDefault A0
+
+  <LocationMatch "^/(static|shared|communityuse/static|programs/static|webinar_tool/static)">
+    ExpiresDefault A0
+  </LocationMatch>
+
+  <LocationMatch "^/static/views">
+    ExpiresDefault A0
+  </LocationMatch>
+
+# Fix IE screen flicker -----
+  BrowserMatch "MSIE" brokenvary=1
+  BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+  BrowserMatch "Opera" !brokenvary
+  SetEnvIf brokenvary 1 force-no-vary
+
+#XSendFile on

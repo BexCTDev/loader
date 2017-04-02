@@ -1,0 +1,19 @@
+# eBase -----------------------------------------------------------------
+<Directory "C:/webserver/htdocs/*/shared">
+	Options None +FollowSymLinks
+	AllowOverride None
+	Require all granted
+</Directory>
+
+<Directory "C:/webserver/htdocs/*/public">
+	Options FollowSymLinks
+	AllowOverride None
+	Require all granted
+</Directory>
+
+<Directory "C:/webserver/htdocs/*/public/user_content">
+	<FilesMatch "logo.*\.png$">
+		ExpiresActive On
+		ExpiresDefault A2592000
+	</FilesMatch>
+</Directory>

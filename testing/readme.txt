@@ -1,3 +1,48 @@
+..:: INSTALLATION DIRECTORIES ::..
+-----------------------------------------------------------------
+WEBSERVER ROOT  = c:\webserver\
+APACHE ROOT     = c:\webserver\apache\
+MYSQL ROOT      = c:\webserver\mysql\
+PHP ROOT        = c:\webserver\php5\
+
+
+..:: CONFIG ::..
+-----------------------------------------------------------------
+
+--: APACHE :--
+conf files
+C:\webserver\apache\conf\httpd.conf
+C:\webserver\apache\conf\conf.d\00-setup.conf
+C:\webserver\apache\conf\conf.d\01-init.conf
+C:\webserver\apache\conf\conf.d\05-ebaseloader.conf
+C:\webserver\apache\conf\conf.d\ebase.include
+
+
+--: MYSQL :--
+C:\webserver\mysql\program-data\my.ini
+
+
+--: PHP :--
+c:\webserver\php5\php.ini
+
+
+..:: WINDOWS ENV. VARIABLES ::..
+-----------------------------------------------------------------
+USER PATH = c:\webserver\apache\
+USER PATH = c:\webserver\mysql\
+USER PATH = c:\webserver\php5\
+
+
+
+ENHANCEMENTS
+PROJECT MANAGER
+-- Create Projects and generate json files
+-- Project Viewer shows project info, db info. versions 
+
+-----------------------------------------------------------------
+..:: DOCUMENTATION ::..
+-----------------------------------------------------------------
+
     //  Features:
     - Consistant way to create and clean up local dev environments based on tasks
     - Standard method to directly relate tasks to local env, no more guessing what project a VH is setup for

@@ -12,8 +12,11 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-success btn-sm" style="float:right;margin-top:10px" data-toggle="modal" data-target="#myModal"><strong ><span class="glyphicon glyphicon-hdd"></span></strong> Server</button>
-      <button type="button" class="btn btn-success btn-sm" style="float:right;margin:10px 10px 0 0" data-toggle="modal" data-target="#updateModal"><strong ><span class="glyphicon glyphicon-tasks"></span></strong> Database</button>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#server_modal"><strong><span class="glyphicon glyphicon-hdd"></span></strong> Server</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#database_modal"><strong><span class="glyphicon glyphicon-tasks"></span></strong> Database</a></li>
+      </ul>
+      
     </div><!--/.navbar-collapse -->
   </div>
 </nav>

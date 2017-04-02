@@ -1,0 +1,13 @@
+// Version : 1.0
+{ "ebaseloader" : [
+	{
+		"project_name" : "ebaseloader",
+		"sql_file" : "",
+		"sql_loaded" : "",
+		"sql_checksum" : "",
+		"document_root" : "C:/webserver/htdocs/ebaseloader/public",
+		"task_number" : "",
+		"task_description" : "",
+		"notes" : ""
+	}
+]}

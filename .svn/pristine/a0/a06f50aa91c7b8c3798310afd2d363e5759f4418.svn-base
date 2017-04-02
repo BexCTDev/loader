@@ -1,0 +1,9 @@
+// Version : 1.0
+{ "project" : [
+	{
+		"project_name" : "{{project_name}}",
+		"sql_file" : "{{sql_file_name}}",
+		"sql_checksum" : "{{sql_checksum}}",
+		"document_root" : "{{document_root}}"
+	}
+]}

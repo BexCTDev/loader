@@ -2,10 +2,14 @@
 <?php 
 include('../core/config.php');
 include('../core/loader.php');
+
+// Put these vars below into file include('../core/load-vars.php');
+
 session_start();
-$_SESSION['message'] 	= '';
+(!isset($_SESSION['message'])) ? $_SESSION['message'] 	= '' : '';
 $loader 				= new Loader();
 $apache_data 			= $loader->get_apache_data($loader->get_files(PATH_APACHE_CONF));
+$databases				= $loader->get_databases();
 
 
 ?>
@@ -21,19 +25,21 @@ $apache_data 			= $loader->get_apache_data($loader->get_files(PATH_APACHE_CONF))
 		<title>eBase Loader : Project Delivery</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="apple-touch-icon" href="../src/apple-touch-icon.png">
+		<meta name="msapplication-config" content="static/icons/browserconfig.xml" />
+		<link rel="apple-touch-icon" href="static/icons/apple-touch-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="static/icons/favicon.ico" />
 
-		<link rel="stylesheet" href="../src/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
 	  	<style>
 			body {
 				padding-top: 50px;
 				padding-bottom: 20px;
 			}
 		</style>
-		<link rel="stylesheet" href="../src/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../src/css/main.css">
+		<link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="static/css/main.css">
 
-		<script src="../src/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src="static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 8]>

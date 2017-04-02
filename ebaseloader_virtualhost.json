@@ -5,6 +5,8 @@
 		"sql_file" : "",
 		"sql_loaded" : "",
 		"sql_checksum" : "",
+		"database" : "",
+		"svn_repository" : "",
 		"document_root" : "C:/webserver/htdocs/ebaseloader/public",
 		"task_number" : "",
 		"task_description" : "",

@@ -1,0 +1,28 @@
+# eBase -----------------------------------------------------------------
+
+<VirtualHost *:80>
+	ServerName ebasedocs.local
+	ServerAlias ebasedocs.ebasefm.com
+
+	LogLevel error
+	ErrorLog logs/ebasedocs-error.log
+	CustomLog logs/ebasedocs-access.log common
+	
+	RewriteEngine On
+	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}
+</VirtualHost>
+
+<VirtualHost *:443>
+	ServerName ebasedocs.local
+	ServerAlias ebasedocs.ebasefm.com
+   
+	DocumentRoot "C:/webserver/htdocs/ebase5/public"
+
+	LogLevel error
+	ErrorLog logs/ebasedocs-error.log
+	CustomLog logs/ebasedocs-access.log common
+
+	Include conf/conf.d/ebase.include
+
+#	XSendFile on
+</VirtualHost>
