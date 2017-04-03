@@ -1,6 +1,14 @@
 <?php // Version : 1.0 ?>
       <footer>
-        <p>&copy;</p>
+        <p class="pull-right">&copy; <?php echo date('Y', time()); ?></p>
+        <p>
+        <?php
+          echo '<pre>';
+          print_r($config);
+          print_r(array_slice(get_defined_constants(), -15, 15, true));
+          echo '</pre>';
+        ?>
+        </p>
       </footer>
     </div> <!-- /container -->       
     <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

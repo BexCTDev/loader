@@ -3,7 +3,8 @@
 	{
 		"project_name" : "{{project_name}}",
 		"sql_file" : "{{sql_file_name}}",
-		"sql_checksum" : "{{sql_checksum}}",
+		"sql_loaded" : "{{sql_loaded}}",
+		"sql_loaded_local" : "{{sql_checksum}}",
 		"document_root" : "{{document_root}}"
 	}
 ]}

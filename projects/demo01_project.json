@@ -1,0 +1,20 @@
+// Version : 1.0
+{ "demo01" : [
+	{
+		"project_name" : "Demo Project 01",
+		"sql_file" : "test1.sql",
+		"sql_loaded" : "1491116164",
+		"document_root" : "demo01",
+		"task_number" : "Task7770",
+		"task_description" : "This is a description for task <strong>Task7770</strong>.",
+		"note" : "New Note / Edit Note / Delete Note \nRecent Notes at top.. store as array here\n\nThese are some notes that are stored in the in htmlspecialchars  &nbsp; $gt; like these. \nNew Line Processing Line 2\nLine3 is here",
+		"notes" : [
+			{
+				"1491116164" : "Note <strong>1</strong>",
+				"1491116264" : "Note &gt;2%lt;",
+				"1491116364" : "Note 3\nLine 2",
+				"1491116464" : "Note 4"
+			}
+		]
+	}
+]}

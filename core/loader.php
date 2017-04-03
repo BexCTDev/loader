@@ -5,7 +5,7 @@
 class Loader {
 	
 	function __construct() {
-		require("db.php");
+		require("../core/db.php");
 		$this->db = new DB();
 		$this->log_file = LOADER_LOGS . '/loader.log';
 	}
@@ -78,7 +78,8 @@ class Loader {
 	// REMOVING FILES
 	// ---------------------------------------------------------------------------
 	public function clear_directory($dir, $rmdir = false) {
-		if (is_dir($dir)  && strlen($dir) > 10) { //make sure that its not the root folder
+		if (is_dir($dir)  && strlen($dir) > 10) 
+		{ //make sure that its not the root folder
 			$opendir = opendir($dir);
 			while(false !== ( $file = readdir($opendir)) ) {
 				if (( $file != '.' ) && ( $file != '..' )) {
@@ -92,23 +93,21 @@ class Loader {
 				}
 			}
 			closedir($opendir);
-    		rmdir($dir);
 			$rmtext = '';
-			if (is_dir($rmdir)) {
+			if ($rmdir) {
 				rmdir($dir);
 				if (is_dir($dir)) {
 					$message = $this->write_log('danger', 'Could not remove dir : '.$dir);
 					return $message;
 				}
-				$rmtext = 'and removed ';
-			} else {
-				if($this->count_files($dir) > 0){
-					$message = $this->write_log('danger', 'All files not removed ( File Count = ' .$this->count_files($dir) .' ) from dir : '.$dir);
-					return $message;
-				}
 			}
-			$message = $this->write_log('success', 'Directory has been cleared ' . $rmtext . ': '.$dir);
-			return $message;
+			if($this->count_files($dir) > 0){
+				$message = $this->write_log('danger', 'All files not removed ( File Count = ' .$this->count_files($dir) .' ) from dir : '.$dir);
+				return $message;
+			} else {
+				$message = $this->write_log('success', 'Directory has been cleared ' . $rmtext . ': '.$dir);
+				return $message;	
+			}
 		} else {
 			$message = $this->write_log('danger', 'Could not open dir : '.$dir);
 			return $message;
@@ -223,7 +222,7 @@ class Loader {
         }
 	}
 
-	public function load_database ($database, $sqlfile, $anonymise = true) {
+	public function load_db ($database, $sqlfile, $anonymise = true) {
 		$q = $this->db->connect($database);
 		if($q) {
 			$handle = fopen($sqlfile, "r");
@@ -303,6 +302,14 @@ class Loader {
 	                    if (strpos($line, 'ServerName') !== false) {
 	                        $Data[$filebase]['Servers'][$port]['ServerName'] = trim(substr($line, strpos($line, 'ServerName')+11));
 	                    }
+	                    
+	                    if (strpos($line, 'ErrorLog') !== false) {
+	                        $Data[$filebase]['Servers'][$port]['ErrorLog'] = trim(substr($line, strpos($line, 'ErrorLog')+9));
+	                    }
+	                    if (strpos($line, 'CustomLog') !== false) {
+	                        $Data[$filebase]['Servers'][$port]['AccessLog'] = trim(substr($line, strpos($line, 'CustomLog')+10 , strpos($line, 'common') - strpos($line, 'CustomLog')-10) );
+	                    }
+
 	                    if (strpos($line, 'ServerAlias') !== false) {
 	                        $Data[$filebase]['Servers'][$port]['ServerAlias'] = trim(substr($line, strpos($line, 'ServerAlias')+12));
 	                        $Data[$filebase]['Ports'][$port] = $this->check_server($Data[$filebase]['Servers'][$port]['ServerAlias'], $port);
@@ -354,44 +361,48 @@ class Loader {
 
 	public function update_config_db($file, $args) {
 	// $args = array ('database' => $database, 'username' => $username, 'password' => $password);
+		$data = array();
 		$handle = fopen($file, "r");
 		if ($handle) {
 			while (($line = fgets($handle)) !== false) {
+				$ignore = false;
 				if (isset($args['username'])) {
-					if(strpos($line, 'username') > 0) {
-						$data[] = '$db[\'default\'][\'username\'] = \''.$username.'\';';
+					if(strpos($line, "'username'") > 0) {
+						array_push($data, '$db[\'default\'][\'username\'] = \''.$args['username'].'\';');
+						$ignore = 1;
+					}
+				} elseif (isset($args['password'])) {
+					if(strpos($line, "'password'") > 0) {
+						array_push($data, '$db[\'default\'][\'password\'] = \''.$args['password'].'\';');
+						$ignore = 1;
+					}
+				} elseif (isset($args['database'])) {
+					if(strpos($line, "'database'") > 0) {
+						array_push($data, '$db[\'default\'][\'database\'] = \''.$args['database'].'\';');
+						$ignore = 1;
 					}
 				}
-				elseif (isset($args['password'])) {
-					if(strpos($line, 'password') > 0) {
-						$data[] = '$db[\'default\'][\'password\'] = \''.$password.'\';';
-					}
-				}
-				elseif (isset($args['database'])) {
-					if(strpos($line, 'database') > 0) {
-						$data[] = '$db[\'default\'][\'database\'] = \''.$database.'\';';
-					}
-				} else {
-					$data[] = $line;
+				if(!$ignore){
+					array_push($data, $line);
 				}
 			}
 			fclose($handle);
 		} else {
-			$message = $this->write_log('danger', 'Could not open file');
+			$message = $this->write_log('danger', 'Could not open file : ' . $file);
 			return $message;
 		} 
 		$handle = fopen($file, "w");
 		if ($handle) {
 			if (count($data) > 0) {
 				foreach ($data as $line) {
-					fwrite($file, $line);
+					fwrite($handle, $line."\n");
 				}	
 			}
 			fclose($handle);
-			$message = $this->write_log('success', 'Config has been updated on : '. $file);
+			$message = $this->write_log('success', 'Config has been updated on : '. $args['virtualhost']);
 			return $message;
 		} else {
-			$message = $this->write_log('danger', 'Could not open file');
+			$message = $this->write_log('danger', 'Could not open file : '. $file);
 			return $message;
 		} 
 	}

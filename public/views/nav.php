@@ -8,12 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">eBase Loader :: Local Servers</a>
+      <a class="navbar-brand" href="#">eBase Loader .::.:</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <!-- Trigger the modal with a button -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#server_modal"><strong><span class="glyphicon glyphicon-hdd"></span></strong> Server</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#server_modal"><strong><span class="glyphicon glyphicon-hdd"></span></strong> Project</a></li>
         <li><a href="#" data-toggle="modal" data-target="#database_modal"><strong><span class="glyphicon glyphicon-tasks"></span></strong> Database</a></li>
       </ul>
       
